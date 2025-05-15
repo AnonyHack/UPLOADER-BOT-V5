@@ -14,7 +14,7 @@ class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "7990210328:AAFnFNvR5HuXOXHuYa5_iMujE-khn6nis7Y")
     API_ID = int(os.environ.get("API_ID", 25753873))  # Add your API_ID
     API_HASH = os.environ.get("API_HASH", "3a5cdc2079cd76af80586102bd9761e2")
-    OWNER_ID = int(os.environ.get("OWNER_ID", 5962658076))  # Your Telegram user ID
+    OWNER_ID = list(map(int, os.environ.get("OWNER_ID", "5962658076").split()))  # Your Telegram user ID
     
     # Database Configuration
     DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://ramybeginning:ALLAHAKBAr%40232956@cluster0.ja2zly9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
