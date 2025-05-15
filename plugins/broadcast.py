@@ -32,6 +32,7 @@ async def send_msg(user_id, message):
 @Client.on_message(filters.private & filters.command('broadcast') & filters.reply)
 async def broadcast_(c, m):
     if m.from_user.id != Config.OWNER_ID:
+        await m.reply_text("You are not authorized to use this command.")
         return
     all_users = await db.get_all_users()
     
