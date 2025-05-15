@@ -11,7 +11,7 @@ logging.basicConfig(
 
 class Config(object):
     
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8090915628:AAH7nckmpimWpUkB4uarKnDMT8eDju-rNE0")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7990210328:AAFnFNvR5HuXOXHuYa5_iMujE-khn6nis7Y")
     API_ID = int(os.environ.get("API_ID",25753873 ))
     API_HASH = os.environ.get("API_HASH", "3a5cdc2079cd76af80586102bd9761e2")
     
@@ -27,7 +27,7 @@ class Config(object):
     OUO_IO_API_KEY = ""
     MAX_MESSAGE_LENGTH = 4096
     PROCESS_MAX_TIMEOUT = 3600
-    DEF_WATER_MARK_FILE = "@iUploaderTestbot"
+    DEF_WATER_MARK_FILE = "@Urluploader4GBbot"
 
     BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
 
@@ -40,7 +40,7 @@ class Config(object):
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002624020325")
 
     TG_MIN_FILE_SIZE = 2194304000
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "iUploaderTestbot")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "Urluploader4GBbot")
     ADL_BOT_RQ = {}
 
     # Set False off else True
