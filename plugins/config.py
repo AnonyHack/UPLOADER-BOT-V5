@@ -36,7 +36,7 @@ class Config(object):
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002285537624"))
     LOGGER = logging
     OWNER_ID = int(os.environ.get("OWNER_ID", 5962658076))
-    SESSION_NAME = "UploaderXNTBot"
+    SESSION_NAME = "Urluploader4GBbot"
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002624020325")
 
     TG_MIN_FILE_SIZE = 2194304000
