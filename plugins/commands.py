@@ -50,7 +50,7 @@ async def start(bot, update):
         is_valid = await check_token(bot, userid, token)
         if is_valid == True:
             await update.reply_text(
-                text=f"<b>Hᴇʏ {update.from_user.mention} 👋,\nʏᴏᴜ Aʀᴇ Sᴜᴄᴄᴇssғᴜʟʟʏ Vᴇʀɪғɪᴇᴅ !\n\nNᴏᴡ Yᴏᴜ Uᴘʟᴏᴀᴅ Fɪʟᴇs Aɴᴅ Vɪᴅᴇᴏs Tɪʟʟ Tᴏᴅᴀʏ Mɪᴅɴɪɢʜᴛ.</b>",
+                text=f"<b>Hᴇʏ {update.from_user.mention} 👋,\nʏᴏᴜ Aʀᴇ Sᴜᴄᴄᴇssғᴜʟʟʏ Vᴇʀɪғɪᴇᴅ !\n\nNᴏᴡ Yᴏᴜ Uᴘʟᴏᴀᴅ Fɪʟᴇs Aɴᴅ Vɪᴅᴇᴏs Tɪʟʟ Tᴏᴅᴀʏ Mɪᴅɴɪɡʜᴛ.</b>",
                 protect_content=True
             )
             await verify_user(bot, userid, token)
@@ -136,7 +136,7 @@ async def info_handler(bot, update):
 
 @Client.on_message(filters.command("warn"))
 async def warn(c, m):
-    if m.from_user.id in Config.OWNER_II:
+    if m.from_user.id in Config.OWNER_ID:
         if len(m.command) >= 3:
             try:
                 user_id = m.text.split(' ', 2)[1]
@@ -147,5 +147,12 @@ async def warn(c, m):
                  await m.reply_text("User Not Notfied Sucessfully 😔")
     else:
         await m.reply_text(text="You Are Not Admin 😡", quote=True)
+
+@Client.on_message(filters.private & filters.command("broadcast") & filters.reply)
+async def broadcast_command(bot, message):
+    if message.from_user.id != Config.OWNER_ID:
+        await message.reply_text("You are not authorized to use this command.")
+        return
+    await broadcast_(bot, message)
 
 
