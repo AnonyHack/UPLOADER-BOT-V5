@@ -21,6 +21,8 @@ from plugins.settings.settings import OpenSettings
 from plugins.config import *
 from plugins.functions.verify import verify_user, check_token
 from pyrogram import types, errors
+from plugins.broadcast import broadcast_  # Ensure this import is present
+
 
 
 
