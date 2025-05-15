@@ -33,11 +33,11 @@ class Config(object):
 
     DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://ramybeginning:ALLAHAKBAr%40232956@cluster0.ja2zly9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002285537624"))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002514036989"))
     LOGGER = logging
     OWNER_ID = int(os.environ.get("OWNER_ID", 5962658076))
     SESSION_NAME = "Urluploader4GBbot"
-    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002624020325")
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002380953539")
 
     TG_MIN_FILE_SIZE = 2194304000
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "Urluploader4GBbot")
